@@ -50,7 +50,7 @@ echo -e "${GREEN}已创建 hosts 文件备份: $HOSTS_BACKUP${NC}"
 
 # 下载最新的 GitHub hosts
 TEMP_HOSTS=$(mktemp)
-if ! curl -s "https://gitlab.com/ineo6/hosts/-/raw/master/next-hosts" > "$TEMP_HOSTS"; then
+if ! curl -s "https://github.com/cnwikee/CheckTMDB/blob/main/Tmdb_host_ipv4" > "$TEMP_HOSTS"; then
     echo -e "${RED}下载 GitHub hosts 失败${NC}"
     rm -f "$TEMP_HOSTS"
     exit 1
